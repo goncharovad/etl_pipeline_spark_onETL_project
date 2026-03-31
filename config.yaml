@@ -1,0 +1,26 @@
+source:
+  host: localhost
+  port: 5432
+  user: ${POSTGRES_USER}
+  password: ${POSTGRES_PASSWORD}
+  database: ${POSTGRES_DB}
+  table: nyc_taxi_raw
+
+target:
+  host: localhost
+  port: 5432
+  user: ${POSTGRES_USER}
+  password: ${POSTGRES_PASSWORD}
+  database: ${POSTGRES_DB}
+  table: nyc_taxi_clean
+
+spark:
+  master: ${SPARK_MASTER}
+  driver_host: ${DRIVER_HOST}
+  app_name: nyc-taxi-etl
+  jars:
+    - org.postgresql:postgresql:42.6.0
+
+hwm:
+  store_table: hwm_store
+  column: pickup_datetime

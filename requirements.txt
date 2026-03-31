@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pyspark
+onetl[spark]
+etl-entities
+sqlalchemy
+psycopg2-binary
+pandas
+python-dotenv
+kaggle
+pyyaml
